@@ -41,9 +41,6 @@ safety_settings = [
 model = genai.GenerativeModel(model_name="gemini-1.0-pro",
                               generation_config=generation_config,
                               safety_settings=safety_settings)
-response = model.generate_content ("Vamos aprender sobre segurança em Helipontos de embarcações e plataformas marítimas. Me dê sugestões")
-print(response.text)
-chat = model.start_chat(history=[])
 
 # Função para interação com o chatbot
 def main():
