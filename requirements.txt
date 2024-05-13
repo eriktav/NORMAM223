@@ -1,4 +1,8 @@
 streamlit>=1.26.0
+
+streamlit
+hugchat==0.0.8
+
 import google.generativeai as genai
 genai.configure(api_key="AIzaSyAfdY_QkCo0F--eKd2aGYhZn7hoqCYWhBM")
 
