@@ -44,29 +44,3 @@ model = genai.GenerativeModel(model_name="gemini-1.0-pro",
 
 # Função para interação com o chatbot
 
-def main():
-   
-    if "messages" not in st.session_state:
-        st.session_state.messages = []
-
-    if "chat" not in st.session_state:
-        st.session_state.chat = model.start_chat()  
-
-    for message in st.session_state.messages:
-        with st.chat_message(message["role"]):
-            st.markdown(message["content"])
-
-    if prompt := st.chat_input(""):
-        st.session_state.messages.append({"role": "user", "content": prompt})
-        with st.chat_message("user"):
-            st.markdown(prompt)
-
-        response = st.session_state.chat.send_message(prompt)
-        st.session_state.messages.append({"role": "assistant", "content": response.text})
-
-        with st.chat_message("assistant"):
-            st.markdown(response.text)
-
-if __name__ == "__main__":
-    main()
-
