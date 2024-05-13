@@ -76,3 +76,5 @@ for message in st.session_state.messages:
         with st.chat_message("assistant"):
             st.markdown(response.text)
 
+if __name__ == "__main__":
+    main()
