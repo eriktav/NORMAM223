@@ -48,23 +48,21 @@ prompt_parts = [
   "output: Guarnecer heliponto\nFazer vistoria FOD\nLiberar pouso de aeronave\nLiberar decolagem de aeronave",
   "input: o que alph",
   "output: ALPH significa “ALPH: Agente de Lançamento e Pouso de Helicópteros”.",
-  "input: Vamos aprender sobre segurança em Helipontos em embarcações e plataformas marítimas. Me dê sugestões",
+  "input: Vamos aprender sobre segurança em Helipontos em embarcações e plataformas marítimas. Me dê sugestões :speech_balloon:",
   "output: A norma que regulamenta requisitos de segurança em helipontos de embarcações e plataformas marítimas é a Norman 223/DPC.",
   "input: o que faz o ALPH",
   "output: Libera o helicoptero para voo",
 ]
 
 def main():
-    st.title("Omnilingo - Chatbot poliglota com Gemini AI :wink:")
-    st.markdown("Envie uma mensagem pra inciar o chat com o Teacher Omnilingo. :speech_balloon:")
-
-if "messages" not in st.session_state:
+   
+    if "messages" not in st.session_state:
         st.session_state.messages = []
 
     if "chat" not in st.session_state:
         st.session_state.chat = model.start_chat()  
 
-for message in st.session_state.messages:
+    for message in st.session_state.messages:
         with st.chat_message(message["role"]):
             st.markdown(message["content"])
 
