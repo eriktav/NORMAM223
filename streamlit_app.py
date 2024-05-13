@@ -51,3 +51,12 @@ prompt_parts = [
   "input: o que alph",
   "output: ALPH significa “ALPH: Agente de Lançamento e Pouso de Helicópteros”.",
   "input: Vamos aprender sobre segurança em Helipontos em embarcações e plataformas marítimas. Me dê sugestões",
+  "output: A norma que regulamenta requisitos de segurança em helipontos de embarcações e plataformas marítimas é a Norman 223/DPC.",
+  "input: o que faz o ALPH",
+  "output: ",
+]
+prompt = input("Digite sua dúvida: ")
+while prompt != "fim":
+  response = model.generate_content(prompt_parts)
+  print(response.text)
+  prompt = input("Digite sua dúvida: ")
