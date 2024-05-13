@@ -50,7 +50,7 @@ if "messages" not in st.session_state:
     if "chat" not in st.session_state:
         st.session_state.chat = model.start_chat()  
 
-    for message in st.session_state.messages:
+for message in st.session_state.messages:
         with st.chat_message(message["role"]):
             st.markdown(message["content"])
 
@@ -64,6 +64,7 @@ if "messages" not in st.session_state:
 
         with st.chat_message("assistant"):
             st.markdown(response.text)
+
 prompt_parts = [
   "input: Quais são as atividades do ALPH?",
   "output: Guarnecer heliponto\nFazer vistoria FOD\nLiberar pouso de aeronave\nLiberar decolagem de aeronave",
@@ -74,4 +75,3 @@ prompt_parts = [
   "input: o que faz o ALPH",
   "output: ",
 ]
-
