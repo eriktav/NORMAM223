@@ -1,5 +1,5 @@
 import streamlit as st
-import google.generativeai as genaifrom hugchat import hugchat
+import google.generativeai as genai
 
 st.title('Vamos aprenser sobre segurança em Helipontos de embarcações e plataformas marítimas')
 st.write('Normam 223!')
