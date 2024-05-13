@@ -3,11 +3,6 @@ st.title('Vamos aprenser sobre segurança em Helipontos de embarcações e plata
 
 st.write('Normam 223!')
 
-"""
-At the command line, only need to run once to install the package via pip:
-
-$ pip install google-generativeai
-"""
 import google.generativeai as genai
 genai.configure(api_key="AIzaSyAfdY_QkCo0F--eKd2aGYhZn7hoqCYWhBM")
 
