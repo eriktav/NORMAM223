@@ -45,7 +45,7 @@ response = model.generate_content ("Vamos aprender sobre segurança em Heliponto
 print(response.text)
 chat = model.start_chat(history=[])
 # Função para interação com o chatbot
-st.markdown("Envie uma mensagem pra inciar o chat. :speech_balloon:")
+
 prompt_parts = [
   "input: Quais são as atividades do ALPH?",
   "output: Guarnecer heliponto\nFazer vistoria FOD\nLiberar pouso de aeronave\nLiberar decolagem de aeronave",
@@ -56,6 +56,7 @@ prompt_parts = [
   "input: o que faz o ALPH",
   "output: ",
 ]
+st.markdown("Envie uma mensagem pra inciar o chat. :speech_balloon:")
 prompt = input("Digite sua dúvida: ")
 while prompt != "fim":
   response = model.generate_content(prompt_parts)
