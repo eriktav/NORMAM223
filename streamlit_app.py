@@ -48,12 +48,11 @@ prompt_parts = [
   "output: Guarnecer heliponto\nFazer vistoria FOD\nLiberar pouso de aeronave\nLiberar decolagem de aeronave",
   "input: o que alph",
   "output: ALPH significa “ALPH: Agente de Lançamento e Pouso de Helicópteros”.",
-  "input: Vamos aprender sobre segurança em Helipontos em embarcações e plataformas marítimas. Me dê sugestões :speech_balloon:",
+  "input: Vamos aprender sobre segurança em Helipontos em embarcações e plataformas marítimas. Me dê sugestões",
   "output: A norma que regulamenta requisitos de segurança em helipontos de embarcações e plataformas marítimas é a Norman 223/DPC.",
   "input: o que faz o ALPH",
   "output: Libera o helicoptero para voo",
 ]
-
 def main():
    
     if "messages" not in st.session_state:
@@ -79,3 +78,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
