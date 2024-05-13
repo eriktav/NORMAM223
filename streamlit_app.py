@@ -46,6 +46,26 @@ print(response.text)
 chat = model.start_chat(history=[])
 # Função para interação com o chatbot
 
+if "messages" not in st.session_state:
+        st.session_state.messages = []
+
+    if "chat" not in st.session_state:
+        st.session_state.chat = model.start_chat()  
+
+    for message in st.session_state.messages:
+        with st.chat_message(message["role"]):
+            st.markdown(message["content"])
+
+    if prompt := st.chat_input(""):
+        st.session_state.messages.append({"role": "user", "content": prompt})
+        with st.chat_message("user"):
+            st.markdown(prompt)
+
+        response = st.session_state.chat.send_message(prompt)
+        st.session_state.messages.append({"role": "assistant", "content": response.text})
+
+        with st.chat_message("assistant"):
+            st.markdown(response.text)
 prompt_parts = [
   "input: Quais são as atividades do ALPH?",
   "output: Guarnecer heliponto\nFazer vistoria FOD\nLiberar pouso de aeronave\nLiberar decolagem de aeronave",
@@ -56,9 +76,4 @@ prompt_parts = [
   "input: o que faz o ALPH",
   "output: ",
 ]
-st.markdown("Envie uma mensagem pra inciar o chat. :speech_balloon:")
-prompt = input("Digite sua dúvida: ")
-while prompt != "fim":
-  response = model.generate_content(prompt_parts)
-  print(response.text)
-  prompt = input("Digite sua dúvida: ")
+
