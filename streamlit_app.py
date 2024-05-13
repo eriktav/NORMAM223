@@ -54,7 +54,7 @@ if st.session_state.messages[-1]["role"] != "assistant":
             response = generate_response(prompt, hf_email, hf_pass) 
             st.write(response) 
     message = {"role": "assistant", "content": response}
-    st.session_state.messages.append(message)from hugchat import hugchat
+        st.session_state.messages.append(message)from hugchat import hugchat
 from hugchat.login import Login
 st.set_page_config(page_title="🤗💬 HugChat")
 with st.sidebar:
