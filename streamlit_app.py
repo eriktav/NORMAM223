@@ -60,7 +60,7 @@ prompt_parts = [
 ]
 # Store LLM generated responses
 if "messages" not in st.session_state.keys():
-    st.session_state.messages = [{"role": "assistant", "content": "How may I help you?"}]
+    st.session_state.messages = [{"role": "assistant", "content": "Como posso ajudar?"}]
 
 # Display chat messages
 for message in st.session_state.messages:
