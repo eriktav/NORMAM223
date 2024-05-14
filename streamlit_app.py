@@ -36,10 +36,13 @@ safety_settings = [
     "threshold": "BLOCK_MEDIUM_AND_ABOVE"
   },
 ]
+system_instruction = "Responda como um professor da norma NORMAM 223 Norma da autoridade matítima Brasileira sobre segurança em helipontos\nresponda no idioma pt-br\nse o prompt não for relacionado heliponto e segurança de heliponto solicite uma pergunta sobre heliponto\n"
+
 #Inicializano o modelo
 
 model = genai.GenerativeModel(model_name="gemini-1.0-pro",
                               generation_config=generation_config,
+                              system_instruction,
                               safety_settings=safety_settings)
 
 # Função para interação com o chatbot
