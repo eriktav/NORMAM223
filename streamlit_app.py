@@ -56,11 +56,11 @@ def main():
     prompt_parts = [
       "input: Quais são as atividades do ALPH?",
       "output: Guarnecer heliponto\nFazer vistoria FOD\nLiberar pouso de aeronave\nLiberar decolagem de aeronave",
-      "input: o que alph",
-      "output: ALPH significa “ALPH: Agente de Lançamento e Pouso de Helicópteros”.",
+      "input: o que é alph?",
+      "output: ALPH significa “ALPH: Agente de Lançamento e Pouso de Helicópteros?”.",
       "input: Vamos aprender sobre segurança em Helipontos em embarcações e plataformas marítimas. Me dê sugestões",
       "output: A norma que regulamenta requisitos de segurança em helipontos de embarcações e plataformas marítimas é a Norman 223/DPC.",
-      "input: o que faz o alph",
+      "input: o que faz o alph?",
       "output: ",
     ]
 
