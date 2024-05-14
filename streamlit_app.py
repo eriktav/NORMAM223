@@ -66,6 +66,9 @@ if "messages" not in st.session_state.keys():
 for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.write(message["content"])
+ 
+if "chat" not in st.session_state:
+        st.session_state.chat = model.start_chat() 
 
 # Function for generating LLM response
 def generate_response(prompt_input):
@@ -88,5 +91,3 @@ if st.session_state.messages[-1]["role"] != "assistant":
     message = {"role": "assistant", "content": response}
     st.session_state.messages.append(message)
 
-if __name__ == "__main__":
-    main()
