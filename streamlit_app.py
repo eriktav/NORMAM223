@@ -42,7 +42,7 @@ system_instruction = "Responda como um professor da norma NORMAM 223 Norma da au
 
 model = genai.GenerativeModel(model_name="gemini-1.0-pro",
                               generation_config=generation_config,
-                              system_instruction,
+                              system_instruction=system_instruction,
                               safety_settings=safety_settings)
 
 # Função para interação com o chatbot
