@@ -48,46 +48,32 @@ response = model.generate_content ("Vamos aprender sobre segurança em Heliponto
 print(response.text)
 chat = model.start_chat(history=[])
 
-prompt_parts = [
-  "input: Quais são as atividades do ALPH?",
-  "output: Guarnecer heliponto\nFazer vistoria FOD\nLiberar pouso de aeronave\nLiberar decolagem de aeronave",
-  "input: o que é alph?",
-  "output: ALPH significa “ALPH: Agente de Lançamento e Pouso de Helicópteros”.",
-  "input: Vamos aprender sobre segurança em Helipontos em embarcações e plataformas marítimas. Me dê sugestões",
-  "output: A norma que regulamenta requisitos de segurança em helipontos de embarcações e plataformas marítimas é a Norman 223/DPC.",
-  "input: o que faz o alph",
-  "output: Libera pouso e decolagem de aeronaves em helipontos",
-]
-# Store LLM generated responses
-if "messages" not in st.session_state.keys():
-    st.session_state.messages = [{"role": "assistant", "content": "Como posso ajudar?"}]
+# Função para interação com o chatbot
 
-# Display chat messages
-for message in st.session_state.messages:
-    with st.chat_message(message["role"]):
-        st.write(message["content"])
- 
-if "chat" not in st.session_state:
-        st.session_state.chat = model.start_chat() 
+def main():
+    st.title("Omnilingo - Chatbot poliglota com Gemini AI :wink:")
+    st.markdown("Envie uma mensagem pra inciar o chat com o Teacher Omnilingo. :speech_balloon:")
 
-# Function for generating LLM response
-def generate_response(prompt_input):
-     # Create ChatBot                        
-    chatbot = model.ChatBot(cookies=cookies.get_dict())
-    return chatbot.chat(prompt_input)
+    if "messages" not in st.session_state:
+        st.session_state.messages = []
 
-# User-provided prompt
-if prompt := st.chat_input(""):
-    st.session_state.messages.append({"role": "user", "content": prompt})
-    with st.chat_message("user"):
-        st.write(prompt)
+    if "chat" not in st.session_state:
+        st.session_state.chat = model.start_chat()  
 
-# Generate a new response if last message is not from assistant
-if st.session_state.messages[-1]["role"] != "assistant":
-    with st.chat_message("assistant"):
-        with st.spinner("Thinking..."):
-            response = generate_response(prompt) 
-            st.write(response) 
-    message = {"role": "assistant", "content": response}
-    st.session_state.messages.append(message)
+    for message in st.session_state.messages:
+        with st.chat_message(message["role"]):
+            st.markdown(message["content"])
 
+    if prompt := st.chat_input(""):
+        st.session_state.messages.append({"role": "user", "content": prompt})
+        with st.chat_message("user"):
+            st.markdown(prompt)
+
+        response = st.session_state.chat.send_message(prompt)
+        st.session_state.messages.append({"role": "assistant", "content": response.text})
+
+        with st.chat_message("assistant"):
+            st.markdown(response.text)
+
+if __name__ == "__main__":
+    main()
