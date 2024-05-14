@@ -5,7 +5,7 @@ st.title('Vamos aprenser sobre segurança em Helipontos de embarcações e plata
 st.write('Normam 223!')
 
 # Configurando a API Key do GEMINI AI
-genai.configure(api_key="AIzaSyAfdY_QkCo0F--eKd2aGYhZn7hoqCYWhBM")
+genai.configure(api_key="")
 
 # Set up the model
 generation_config = {
