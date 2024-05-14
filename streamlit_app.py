@@ -54,7 +54,7 @@ prompt_parts = [
       "input: o que faz o alph?",
       "output: Libera o pouso e decolagem de aeronaves em Helipontos",
     ]
-response = model.generate_content("prompt_parts")
+response = model.generate_content(prompt_parts)
 print(response.text)
 chat = model.start_chat(history=[]) 
 
