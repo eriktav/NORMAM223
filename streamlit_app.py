@@ -44,10 +44,6 @@ model = genai.GenerativeModel(model_name="gemini-1.0-pro",
 
 # Função para interação com o chatbot
 
-response = model.generate_content ("prompt_parts")
-print(response.text)
-chat = model.start_chat(history=[])
-
 prompt_parts = [
       "input: Quais são as atividades do ALPH?",
       "output: Guarnecer heliponto\nFazer vistoria FOD\nLiberar pouso de aeronave\nLiberar decolagem de aeronave",
@@ -58,6 +54,9 @@ prompt_parts = [
       "input: o que faz o alph?",
       "output: Libera o pouso e decolagem de aeronaves em Helipontos",
     ]
+response = model.generate_content("prompt_parts")
+print(response.text)
+chat = model.start_chat(history=[]) 
 
 # Função para interação com o chatbot
 
