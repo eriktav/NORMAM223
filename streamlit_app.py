@@ -55,9 +55,6 @@ prompt_parts = [
       "input: o que faz o alph?",
       "output: Libera o pouso e decolagem de aeronaves em Helipontos",
     ]
-response = model.generate_content(prompt_parts)
-print(response.text)
-chat = model.start_chat(history=[]) 
 
 # Função para interação com o chatbot
 
@@ -79,8 +76,9 @@ def main():
         with st.chat_message("user"):
             st.markdown(prompt)
 
-        response = st.session_state.chat.send_message(prompt)
-        st.session_state.messages.append({"role": "assistant", "content": response.text})
+        response = model.generate_content(prompt_parts)
+        print(response.text)
+        chat = model.start_chat(history=[]) 
 
         with st.chat_message("assistant"):
             st.markdown(response.text)
