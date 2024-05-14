@@ -56,13 +56,13 @@ prompt_parts = [
       "input: Vamos aprender sobre segurança em Helipontos em embarcações e plataformas marítimas. Me dê sugestões",
       "output: A norma que regulamenta requisitos de segurança em helipontos de embarcações e plataformas marítimas é a Norman 223/DPC.",
       "input: o que faz o alph?",
-      "output: ",
+      "output: Libera o pouso e decolagem de aeronaves em Helipontos",
     ]
 
 # Função para interação com o chatbot
 
 def main():
-    st.markdown("Envie uma mensagem pra inciar o chat:")
+    st.markdown("Envie uma mensagem para inciar o chat:")
 
         if "messages" not in st.session_state:
         st.session_state.messages = []
