@@ -87,3 +87,6 @@ if st.session_state.messages[-1]["role"] != "assistant":
             st.write(response) 
     message = {"role": "assistant", "content": response}
     st.session_state.messages.append(message)
+
+if __name__ == "__main__":
+    main()
