@@ -38,8 +38,6 @@ safety_settings = [
 ]
 system_instruction = "Responda como um professor\nensine sobre segurança em Helipontos de embarcações e plataformas marítimas\nresponda no idioma pt-br\nse o prompt não for relacionado heliponto e segurança de heliponto solicite uma pergunta sobre heliponto\n"
 
-#Inicializano o modelo
-
 model = genai.GenerativeModel(model_name="gemini-1.5-pro-latest",
                               generation_config=generation_config,
                               system_instruction=system_instruction,
