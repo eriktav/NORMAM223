@@ -36,7 +36,7 @@ safety_settings = [
     "threshold": "BLOCK_MEDIUM_AND_ABOVE"
   },
 ]
-system_instruction = "Responda como um professor da norma NORMAM 223 Norma da autoridade matítima Brasileira sobre segurança em helipontos, \nresponda no idioma pt-br\nse o prompt não for relacionado heliponto e segurança de heliponto solicite uma pergunta sobre heliponto\n"
+system_instruction = "Responda como um professor e vai ensinar sobre segurança em Helipontos de embarcações e plataformas marítimas, \nresponda no idioma pt-br\nse o prompt não for relacionado heliponto e segurança de heliponto solicite uma pergunta sobre heliponto\n"
 
 #Inicializano o modelo
 
