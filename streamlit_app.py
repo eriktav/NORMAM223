@@ -47,3 +47,14 @@ model = genai.GenerativeModel(model_name="gemini-1.0-pro",
 response = model.generate_content ("Vamos aprender sobre segurança em Helipontos de embarcações e plataformas marítimas. Me dê sugestões")
 print(response.text)
 chat = model.start_chat(history=[])
+
+prompt_parts = [
+  "input: Quais são as atividades do ALPH?",
+  "output: Guarnecer heliponto\nFazer vistoria FOD\nLiberar pouso de aeronave\nLiberar decolagem de aeronave",
+  "input: o que é alph?",
+  "output: ALPH significa “ALPH: Agente de Lançamento e Pouso de Helicópteros”.",
+  "input: Vamos aprender sobre segurança em Helipontos em embarcações e plataformas marítimas. Me dê sugestões",
+  "output: A norma que regulamenta requisitos de segurança em helipontos de embarcações e plataformas marítimas é a Norman 223/DPC.",
+  "input: o que faz o alph",
+  "output: Libera pouso e decolagem de aeronaves em helipontos",
+]
