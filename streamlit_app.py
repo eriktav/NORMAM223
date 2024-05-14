@@ -58,8 +58,6 @@ prompt_parts = [
   "input: o que faz o alph",
   "output: Libera pouso e decolagem de aeronaves em helipontos",
 ]
-
-prompt = input("Digite sua dúvida: ")
-while prompt != "fim":
-  response = model.generate_content(prompt_parts)
-  print(response.text)
+# Store LLM generated responses
+if "messages" not in st.session_state.keys():
+    st.session_state.messages = [{"role": "assistant", "content": "How may I help you?"}]
