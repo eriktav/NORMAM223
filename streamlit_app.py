@@ -51,7 +51,7 @@ chat = model.start_chat(history=[])
 # Função para interação com o chatbot
 
 def main():
-        st.markdown("Envie uma mensagem pra inciar o chat:")
+    st.markdown("Envie uma mensagem pra inciar o chat:")
 
     if "messages" not in st.session_state:
         st.session_state.messages = []
