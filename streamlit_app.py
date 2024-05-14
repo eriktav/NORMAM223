@@ -48,12 +48,7 @@ response = model.generate_content ("Vamos aprender sobre segurança em Heliponto
 print(response.text)
 chat = model.start_chat(history=[])
 
-# Função para interação com o chatbot
-
-def main():
-    st.markdown("Envie uma mensagem pra inciar o chat:")
-
-    prompt_parts = [
+prompt_parts = [
       "input: Quais são as atividades do ALPH?",
       "output: Guarnecer heliponto\nFazer vistoria FOD\nLiberar pouso de aeronave\nLiberar decolagem de aeronave",
       "input: o que é alph?",
@@ -64,7 +59,12 @@ def main():
       "output: ",
     ]
 
-    if "messages" not in st.session_state:
+# Função para interação com o chatbot
+
+def main():
+    st.markdown("Envie uma mensagem pra inciar o chat:")
+
+        if "messages" not in st.session_state:
         st.session_state.messages = []
 
     if "chat" not in st.session_state:
