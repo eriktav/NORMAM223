@@ -1,7 +1,7 @@
 import streamlit as st
 import google.generativeai as genai
 
-st.title('Vamos aprenser sobre segurança em Helipontos de embarcações e plataformas marítimas')
+st.title('Segurança em Helipontos de embarcações e plataformas marítimas')
 st.write('Normam 223!')
 
 # Configurando a API Key do GEMINI AI
@@ -74,7 +74,7 @@ def generate_response(prompt_input):
     return chatbot.chat(prompt_input)
 
 # User-provided prompt
-if prompt := st.chat_input(disabled=not ()):
+if prompt := st.chat_input(disabled=not ( )):
     st.session_state.messages.append({"role": "user", "content": prompt})
     with st.chat_message("user"):
         st.write(prompt)
