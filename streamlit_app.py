@@ -62,7 +62,8 @@ prompt_parts = [
   "output: A norma que regulamenta requisitos de segurança em helipontos de embarcações e plataformas marítimas é a Norman 223/DPC.",
   "input: o que faz o alph",
   "output: ",
-  
+]
+
     if "messages" not in st.session_state:
         st.session_state.messages = []
 
