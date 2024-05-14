@@ -44,3 +44,6 @@ model = genai.GenerativeModel(model_name="gemini-1.0-pro",
 
 # Função para interação com o chatbot
 
+response = model.generate_content ("Vamos aprender sobre segurança em Helipontos de embarcações e plataformas marítimas. Me dê sugestões")
+print(response.text)
+chat = model.start_chat(history=[])
