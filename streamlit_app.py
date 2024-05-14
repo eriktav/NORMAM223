@@ -51,8 +51,7 @@ chat = model.start_chat(history=[])
 # Função para interação com o chatbot
 
 def main():
-    st.title("Omnilingo - Chatbot poliglota com Gemini AI :wink:")
-    st.markdown("Envie uma mensagem pra inciar o chat com o Teacher Omnilingo. :speech_balloon:")
+        st.markdown("Envie uma mensagem pra inciar o chat:")
 
     if "messages" not in st.session_state:
         st.session_state.messages = []
