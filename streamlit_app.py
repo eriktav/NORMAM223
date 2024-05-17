@@ -78,7 +78,7 @@ def generate_response(prompt_input):
     return chatbot.chat(prompt_input)
 
 # User-provided prompt
-  if prompt := st.chat_input():
+  if prompt := st.chat_input(disabled=not):
     with st.chat_message():
         st.write(prompt)
 
