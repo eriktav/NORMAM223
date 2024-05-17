@@ -69,7 +69,9 @@ for message in st.session_state.messages:
 
 # Function for generating LLM response
 def generate_response(prompt_input):
-     
+     # Create ChatBot                        
+    chatbot = model
+    return chatbot.chat(prompt_input)
 
 # User-provided prompt
 if prompt := st.chat_input(""):
