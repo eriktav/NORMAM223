@@ -1,6 +1,6 @@
 import streamlit as st
 import google.generativeai as genai
-st.set_page_config(page_title=" Norman223")
+st.set_page_config(page_title=" NORMAM223")
 st.title('Segurança em Helipontos de embarcações e plataformas marítimas')
 st.write('NORMAM 223.')
 
@@ -59,8 +59,8 @@ prompt_parts = [
 
 
 # Store LLM generated responses
-
-
+if "messages" not in st.session_state.keys():
+    st.session_state.messages = [{"role": "assistant", "content": "How may I help you?"}]
 
 # Display chat messages
 for message in st.session_state.messages:
