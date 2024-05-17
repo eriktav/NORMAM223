@@ -70,7 +70,10 @@ for message in st.session_state.messages:
 # Function for generating LLM response
 def generate_response(prompt_input):
      # Create ChatBot                        
-    chatbot = model
+    chatbot = genai.GenerativeModel(model_name="gemini-1.5-pro-latest",
+                              generation_config=generation_config,
+                              system_instruction=system_instruction,
+                              safety_settings=safety_settings)
     return chatbot.chat(prompt_input)
 
 # User-provided prompt
