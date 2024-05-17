@@ -12,7 +12,7 @@ generation_config = {
   "temperature": 1.0,
   "top_p": 1,
   "top_k": 0,
-  "max_output_tokens": 2048,
+  "max_output_tokens": 8192,
   "stop_sequences": [
     ".",
   ],
