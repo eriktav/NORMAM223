@@ -4,6 +4,9 @@ import google.generativeai as genai
 st.title('Segurança em Helipontos de embarcações e plataformas marítimas')
 st.write('NORMAM 223.')
 
+with st.sidebar:
+  st.markdown('📖 Desenvolvido por Erik Tavares, [LinkedIn](www.linkedin.com/in/erik-tavares-a0390a30/)!')
+
 # Configurando a API Key do GEMINI AI
 genai.configure(api_key="AIzaSyAfdY_QkCo0F--eKd2aGYhZn7hoqCYWhBM")
 
