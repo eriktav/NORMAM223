@@ -75,10 +75,8 @@ if prompt := st.chat_input(""):
         st.markdown(prompt)
 
 # Generate a new response if last message is not from assistant
-    if st.session_state.messages[-1]["role"] != "assistant":
-      with st.chat_message("assistant"):
-        with st.spinner("Thinking..."):
-            response = generate_response(prompt) 
+    response = st.session_state.chat.send_message(prompt)
+        st.session_state.messages.append({"role": "assistant", "content": response.text})
             st.write(response) 
       message = {"role": "assistant", "content": response}
       st.session_state.messages.append(message)
