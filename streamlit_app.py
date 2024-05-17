@@ -1,9 +1,6 @@
 import streamlit as st
 import google.generativeai as genai
-
-# App title
-st.set_page_config(page_title="🤗💬 HugChat")
-
+st.set_page_config(page_title=" Norman223")
 st.title('Segurança em Helipontos de embarcações e plataformas marítimas')
 st.write('NORMAM 223.')
 
