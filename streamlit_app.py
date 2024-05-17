@@ -2,7 +2,7 @@ import streamlit as st
 import google.generativeai as genai
 
 st.title('Segurança em Helipontos de embarcações e plataformas marítimas')
-st.write('Normam 223!')
+st.write('Normam 223.')
 
 # Configurando a API Key do GEMINI AI
 genai.configure(api_key="AIzaSyAfdY_QkCo0F--eKd2aGYhZn7hoqCYWhBM")
