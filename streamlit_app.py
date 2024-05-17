@@ -67,14 +67,6 @@ for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.write(message["content"])
 
-# Function for generating LLM response
-def generate_response(prompt_input):
-     # Create ChatBot                        
-    chatbot = genai.GenerativeModel(model_name="gemini-1.5-pro-latest",
-                              generation_config=generation_config,
-                              system_instruction=system_instruction,
-                              safety_settings=safety_settings)
-    return chatbot.chat(prompt_input)
 
 # User-provided prompt
 if prompt := st.chat_input(""):
