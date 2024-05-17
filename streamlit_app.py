@@ -66,3 +66,9 @@ if "messages" not in st.session_state.keys():
 for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.write(message["content"])
+
+# Function for generating LLM response
+   
+    # Create ChatBot                        
+    chatbot = hugchat.ChatBot(cookies=cookies.get_dict())
+    return chatbot.chat(prompt_input)
