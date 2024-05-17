@@ -79,6 +79,7 @@ def generate_response(prompt_input):
 
 # User-provided prompt
   if prompt := st.chat_input(disabled=not):
+      st.session_state.messages.append({"role": "user", "content": prompt})
     with st.chat_message():
         st.write(prompt)
 
