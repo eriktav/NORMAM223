@@ -59,8 +59,8 @@ prompt_parts = [
 
 # Função para interação com o chatbot
 
-if "messages" not in st.session_state.keys():
-    st.session_state.messages = [{"role": "assistant", "content": "Como posso ajudar?"}]
+ if "messages" not in st.session_state:
+        st.session_state.messages = []
 
 # Display chat messages
 for message in st.session_state.messages:
