@@ -60,7 +60,7 @@ prompt_parts = [
 # Função para interação com o chatbot
 
 if "messages" not in st.session_state.keys():
-    st.session_state.messages = [{"role": "assistant", "content": "How may I help you?"}]
+    st.session_state.messages = [{"role": "assistant", "content": "Como posso ajudar?"}]
 
 # Display chat messages
 for message in st.session_state.messages:
@@ -78,14 +78,14 @@ def generate_response(prompt_input):
     return chatbot.chat(prompt_input)
 
 # User-provided prompt
-    with st.chat_message("user"):
+    with st.chat_message():
         st.write(prompt)
 
 # Generate a new response if last message is not from assistant
 if st.session_state.messages[-1]["role"] != "assistant":
     with st.chat_message("assistant"):
         with st.spinner("Thinking..."):
-            response = generate_response(prompT) 
+            response = generate_response(prompt) 
             st.write(response) 
     message = {"role": "assistant", "content": response}
     st.session_state.messages.append(message)
