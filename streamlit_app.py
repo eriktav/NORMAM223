@@ -57,11 +57,6 @@ prompt_parts = [
       "output: Libera o pouso e decolagem de aeronaves em Helipontos",
     ]
 
-# Função para interação com o chatbot
-
- if "message" not in st.session_state:
-        st.session_state.messages = []
-
 # Display chat messages
 for message in st.session_state.messages:
     with st.chat_message(message["role"]):
