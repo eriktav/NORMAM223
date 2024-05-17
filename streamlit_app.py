@@ -59,7 +59,7 @@ prompt_parts = [
 
 # Função para interação com o chatbot
 
- if "messages" not in st.session_state:
+ if "message" not in st.session_state:
         st.session_state.messages = []
 
 # Display chat messages
