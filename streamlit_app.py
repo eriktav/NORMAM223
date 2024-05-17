@@ -37,7 +37,7 @@ safety_settings = [
   },
 ]
 
-system_instruction = "Responda como um professor, \nse no primeiro o prompt se não for relacionado heliponto e segurança de heliponto solicite uma pergunta sobre heliponto\nnresponda no idioma pt-br\"
+system_instruction = "Responda como um professor, \nse no primeiro o prompt se não for relacionado heliponto e segurança de heliponto solicite uma pergunta sobre heliponto\nnresponda no idioma pt-br\n"
 
 model = genai.GenerativeModel(model_name="gemini-1.5-pro-latest",
                               generation_config=generation_config,
