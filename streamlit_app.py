@@ -74,7 +74,7 @@ def generate_response(prompt_input):
     return chatbot.chat(prompt_input)
 
 # User-provided prompt
-if prompt := st.chat_input():
+if prompt := st.chat_input(""):
     st.session_state.messages.append({"role": "user", "content": prompt})
     with st.chat_message("user"):
         st.write(prompt)
